@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "task_id": "bootstrap-127e1a93-03e8bf94",
+  "plan_revision": "127e1a931ac78d1daf9c824a20108543d3746b17",
+  "expected_base_sha": "127e1a931ac78d1daf9c824a20108543d3746b17",
+  "intent": "Accepted bootstrap scope: Add a `subtract` function alongside `add` in src/math.js\n\nAdd a `subtract` function alongside `add` in src/math.js\n\nWhy: The entire codebase is one source file, `src/math.js`, exporting a single 3-line `add(a, b)` function, so mirroring it with `subtract(a, b)` is the smallest possible change that touches exactly one file and follows the existing export style. `harnessd.json` is an empty config (`bundles: []`), and there are no tests or package manifest, so anything larger (tests, tooling) would exceed a bounded first task.\n\nWHY: The entire codebase is one source file, `src/math.js`, exporting a single 3-line `add(a, b)` function, so mirroring it with `subtract(a, b)` is the smallest possible change that touches exactly one file and follows the existing export style. `harnessd.json` is an empty config (`bundles: []`), and there are no tests or package manifest, so anything larger (tests, tooling) would exceed a bounded first task.\nFILES: src/math.js",
+  "dependencies": [],
+  "authority": [
+    {
+      "key": "workspace:psvensson/b1-bootstrap-witness",
+      "mode": "exclusive"
+    }
+  ],
+  "proof": {
+    "version": 1,
+    "steps": [
+      {
+        "id": "workspace-present",
+        "argv": [
+          "/bin/sh",
+          "-c",
+          "test -e package.json -o -e go.mod -o -e Cargo.toml -o -e pyproject.toml -o -e pom.xml -o -d src"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 60
+      }
+    ]
+  }
+}
