@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "task_id": "bootstrap-127e1a93-638af90c",
+  "plan_revision": "127e1a931ac78d1daf9c824a20108543d3746b17",
+  "expected_base_sha": "127e1a931ac78d1daf9c824a20108543d3746b17",
+  "intent": "Accepted bootstrap scope: Add a `subtract(a, b)` function alongside `add` in src/math.js\n\nAdd a `subtract(a, b)` function alongside `add` in src/math.js\n\nWhy: The entire codebase is a single 3-line module exporting only `add`, so a one-function addition mirrors the existing style with near-zero risk. There is no test setup or package config (harnessd.json is empty), so keeping the change to one pure function keeps it truly bounded.\n\nWHY: The entire codebase is a single 3-line module exporting only `add`, so a one-function addition mirrors the existing style with near-zero risk. There is no test setup or package config (harnessd.json is empty), so keeping the change to one pure function keeps it truly bounded.\nFILES: src/math.js",
+  "dependencies": [],
+  "authority": [
+    {
+      "key": "workspace:psvensson/b1-bootstrap-witness",
+      "mode": "exclusive"
+    }
+  ],
+  "proof": {
+    "version": 1,
+    "steps": [
+      {
+        "id": "workspace-present",
+        "argv": [
+          "/bin/sh",
+          "-c",
+          "test -e package.json -o -e go.mod -o -e Cargo.toml -o -e pyproject.toml -o -e pom.xml -o -d src"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 60
+      }
+    ]
+  }
+}
